@@ -28,14 +28,22 @@ for i in range(10):
     awesomelist.append('hoi')
 dicth['ID'] = ilist
 dictg["AWESOME"] = awesomelist
-print dicth
-df = pd.DataFrame(dict([(k,pd.Series(v)) for k,v in dicth.items()]))
-dg = pd.DataFrame(dict([(k,pd.Series(v)) for k,v in dictg.items()]))
-print df
-print dg
-
-
-xxxx = pd.concat([df, dg], axis=1)
-xxxx.set_index('ID', inplace=True)
-print xxxx
-xxxx.to_csv('xxxx.csv')
+# print dicth
+# df = pd.DataFrame(dict([(k,pd.Series(v)) for k,v in dicth.items()]))
+# dg = pd.DataFrame(dict([(k,pd.Series(v)) for k,v in dictg.items()]))
+# print df
+# print dg
+#
+#
+# xxxx = pd.concat([df, dg], axis=1)
+# xxxx.set_index('ID', inplace=True)
+# print xxxx
+# xxxx.to_csv('xxxx.csv')
+gh = [2,2,3,4,5,6,7,8]
+gh = np.array(gh)
+z = np.ones(gh.shape)
+y = z-gh
+print np.prod(y)
+print np.prod((z-gh))
+x = np.prod(gh)
+print x
